@@ -1,5 +1,28 @@
 var prompt = require('prompt');
 
+prompt.start();
+
+  //
+  // Get two properties from the user: username and email
+  //
+
+var username1, marker1, username2, marker2;
+
+prompt.get(['username1', 'marker1', 'username2', 'marker2'], function (err, result) {
+  username1 = result.username1;
+  marker1 = result.market1;
+  username2 = result.username2;
+  marker2 = result.marker2;
+
+  console.log('Your results and are markers are:');
+  console.log('Player 1\'s username is: ' + result.username1);
+  console.log('Player 1\'s marker is: ' + result.marker1);
+  console.log('Player 2\'s username is: ' + result.username2);
+  console.log('Player 2\'s marker is: ' + result.marker2);
+});
+
+
+
 var board = {
   1: ' ',
   2: ' ',
@@ -22,7 +45,10 @@ var printBoard = function () {
 
 // printBoard();
 
+
+
 // create function that accepts user input
+
 
 // create function to validate user input
 
