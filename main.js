@@ -20,9 +20,10 @@ var printBoard = function () {
   );
 };
 
-var username1, marker1, username2, marker2;
+var username1, marker1, username2, marker2, count, winner;
 prompt.start();
-prompt.get(['username1', 'marker1', 'username2', 'marker2', 'player1Input'], function (err, result) {
+prompt.get(['username1', 'marker1', 'username2', 'marker2', 'player1Input1', 'player2Input1'], function (err, result) {
+  // 'player1Input2', 'player2Input2', 'player1Input3', 'player2Input3', 'player1Input4', 'player2Input4', 'player1Input5'
   username1 = result.username1;
   marker1 = result.market1;
   username2 = result.username2;
@@ -34,23 +35,20 @@ prompt.get(['username1', 'marker1', 'username2', 'marker2', 'player1Input'], fun
   console.log('Player 2\'s username is: ' + result.username2);
   console.log('Player 2\'s marker is: ' + result.marker2);
 
-  console.log(result.player1Input);
-  printBoard()
+  console.log(result.player1Input1);
+  board[result.player1Input1] = result.marker1;
+  printBoard();
+
+  prompt.get(['input5']);
+  console.log(input5);
+  console.log(result.player1Input2);
+  board[result.player2Input1] = result.marker2;
+  printBoard();
 });
 
 // printBoard();
 
-var player1Input;
-
-prompt.start();
-// create function that accepts user input
-prompt.get(['player1Input'], function (err, result) {
-  console.log(result.player1Input);
-  // board[result.player1Input] = marker1;
-  // printBoard();
-});
-
-// create function to validate user input
+// var player1Input;
 
 // create function that uses validation function and placing function
 
