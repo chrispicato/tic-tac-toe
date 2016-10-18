@@ -20,4 +20,14 @@ var printBoard = function () {
   );
 };
 
-printBoard();
+// printBoard();
+
+// create function that accepts user input
+
+// create function to validate user input
+
+// create function that uses validation function and placing function
+
+// create list of winning combinations
+
+// create a function that checks the board if there's a winning combination
